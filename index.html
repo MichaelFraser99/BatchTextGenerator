@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Batch Text Generator</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Batch Text Generator</h1>
+        
+        <hr>
+        
+        <div class="flexRow flexCenter">
+            <h3>Word(s) to Insert</h3>
+            <h3>|</h3> 
+            <h3>Key to Replace</h3>
+        </div>
+
+        <div class="replacementPair">
+            <input type="text" class="replacementPairValue" value="John Johnson">
+            <label></label>
+            <select name="keys" class="replacementPairKey">
+                <option value="*name*">*name*</option>
+            </select>
+        </div>
+
+        <hr>
+        <textarea id="passage" placeholder="Passage to produce">
+Hello *name*,
+
+This is an example - please replace with your own message. Currently only the *name* tag is supported however more will be added. If you click "Generate" below you will see that all instances of *name* will be replaced with the word entered at the top (default Bill)
+
+Hopefully this tool proves helpful!
+        </textarea>
+        <br>
+        <br>
+        <div class="flexCenter">
+            <input id="generateButton" type="button" value="Generate">
+        </div>
+        <hr>
+        <h3>Output</h3>
+        <br>
+        <label id="outputLabel"></label>
+    </body>
+</html>
